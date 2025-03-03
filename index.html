@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumar's Portfolio</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+        }
+        .logo img {
+            width: 340px;
+            height: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body> 
+    <div class="hero">
+    <nav>
+        <div class="logo">
+            <img src="logo1 (3).png" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content" id="home">
+        <h3>Pursuing Bachelor's degree in IT</h3>
+        <h3>A Full Stack Developer</h3>
+        <h1 style="font-size: 50px; font-weight: bold; font-family: 'Poppins', sans-serif; color: white;">Hi I'm
+            <span style="color: #438fa8;">Kumar</span> Venkat <span style="color: #438fa8;">Madasu</span> 
+        </h1>
+    </div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-image">
+                <img src="aboutimage.jpg" alt="Kumar Venkat">
+            </div>
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>Hello...! I’m M.Kumar Venkat, an Information Technology undergraduate passionate about web development, AI, and problem-solving. I specialize in full-stack development using React.js and MySQL, building seamless and interactive applications.
+                    With hands-on experience in real-world projects, hackathons, and internships, I’ve honed my skills in Java, Python, and machine learning. I thrive in collaborative environments, continuously learning and exploring AI, cloud computing, and automation to drive innovation. </p>
+
+                <div class="tabs">
+                    <button class="tab-link active" onclick="openTab(event, 'skills')">Skills</button>
+                    <button class="tab-link active" onclick="openTab(event, 'experience')">Experience</button>
+                    <button class="tab-link active" onclick="openTab(event, 'education')">Education</button>
+                </div>
+
+                <div id="skills" class="tab-content active">
+                    <h4>Web Designing</h4>
+                    <p>HTML, CSS, Figma</p>
+                    <h4>Programming Languages</h4>
+                    <p>Java, Python, C,JavaScript</p>
+                    <h4>Professional Skills</h4>
+                    <p>Proficient in full-stack web development (React.js, Node.js, MySQL).</p>
+                    <p>Strong problem-solving and analytical thinking abilities.</p>
+                    <p>Experience in machine learning and AI-based applications.</p>
+                    <p>Effective communication and collaboration in team environments.</p>
+                    <p>Adaptability and continuous learning mindset.</p>
+                    <h4>Machine Learning</h4>
+                    <p>TensorFlow, Keras, Scikit-learn</p>
+                    <h4>Data Analysis</h4>
+                    <p>Pandas, NumPy, Matplotlib, Microsoft Power BI</p>
+                    <h4>Database Management</h4>
+                    <p>Sql WorkBench, MySQL</p>
+                </div>
+
+                <div id="experience" class="tab-content active">
+                    <h3>Work Experience</h3>
+                        <p><b><span>Intern (Virtual) - Oasis Infobyte</span> </b> <br> Dec 2023 - Jan 2024</p>
+                        <p>Developed a portfolio website and a landing page during my web development internship, showcasing web design and branding skills.</p>
+                
+                        <p><b><span>UI/UX Design Intern (Virtual) - CodeTech IT Solutions</span></b> <br> Sep - Oct 2024</p>
+                        <p>Designed a user-friendly e-commerce website, a smooth mobile application, and an engaging interface for an e-tutor platform using Figma.</p>
+                </div>
+
+                <div id="education" class="tab-content active">
+                    <h3>Education</h3>
+                    <p><b><span>Marri Laxman Reddy Institute of Technology</b></span> (Affiliated by JNTUH) <br> 2022-2026 | Information Technology | CGPA: 9.61</p>
+                    <p><b><span>Shree Akshaya Junior College</b></span> <br> 2020-2022 (Class XII) | Aggregated: 98.4%</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openTab(evt, tabName) {
+    let tabContent = document.getElementsByClassName("tab-content");
+    let tabLinks = document.getElementsByClassName("tab-link");
+
+    // Hide all tab contents
+    for (let i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+    }
+
+    // Remove the 'active' class from all tab links
+    for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("active");
+    }
+
+    // Show the selected tab content
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
+}
+
+// Ensure only the 'skills' tab is visible initially
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("skills").style.display = "block";
+    document.getElementById("experience").style.display = "none";
+    document.getElementById("education").style.display = "none";
+});
+
+    </script>
+<section class="services" id="services">
+    <div class="title">
+        <h1>My Services</h1>
+    </div>
+    <div class="services-container">
+        <div class="service-card">
+            <i class="fa-solid fa-code"></i>
+            <h5>Frontend Development</h5>
+            <p>Creating interactive and responsive UI using HTML, CSS, JavaScript, and React.js.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-brain"></i>
+            <h5>Machine Learning</h5>
+            <p>Developing AI-driven models using TensorFlow, Keras, and data analysis techniques.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-server"></i>
+            <h5>Backend Development</h5>
+            <p>Building RESTful APIs and database management with Node.js and MySQL.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-cloud"></i>
+            <h5>Cloud Computing</h5>
+            <p>Deploying scalable applications on AWS, Firebase, and cloud platforms.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-brands fa-figma"></i>
+            <h5>UI/UX Design</h5>
+            <p>Creating seamless and user-friendly designs using Figma and Adobe XD.</p>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-pen-ruler"></i>
+            <h5>Graphic Design</h5>
+            <p>Designing digital assets and branding elements using Canva and Photoshop.</p>
+        </div>
+    </div>
+</section>
+<!-- Projects Section -->
+<section class="projects" id="projects">
+    <div class="title">
+        <h1>My Projects</h1>
+    </div>
+    <div class="projects-container">
+        <!-- Project 1: Future Crop Yield Prediction -->
+        <div class="project-card">
+            <img src="pg1.jpg" alt="Future Crop Yield Prediction">
+            <div class="project-overlay">
+                <h3>Future Crop Yield Prediction</h3>
+                <p>An AI-based project to predict crop yield using machine learning models.</p>
+                <a href="https://github.com/kumar1905/Future-CropYield-Analysis" target="_blank">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 2: AR Railway Navigation System -->
+        <div class="project-card">
+            <img src="pg2.jpg" alt="AR Railway Navigation System">
+            <div class="project-overlay">
+                <h3>AR Railway Navigation System</h3>
+                <p>An augmented reality-based navigation system for railway stations.</p>
+                <a href="https://kumar1905.github.io/LocoGuide/" target="_blank">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 3: Next Gen GPMS -->
+        <div class="project-card">
+            <img src="pg3.jpg" alt="Next Gen GPMS">
+            <div class="project-overlay">
+                <h3>Next Gen GPMS</h3>
+                <p>A digital gate pass management system for tracking visitors.</p>
+                <a href="https://github.com/kumar1905/MLRIT-GATEPASS" target="_blank">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 4: Home Decor Landing Page -->
+        <div class="project-card">
+            <img src="pg4.jpg" alt="Home Decor Landing Page">
+            <div class="project-overlay">
+                <h3>Home Decor Landing Page</h3>
+                <p>A responsive landing page for a home decor business.</p>
+                <a href="https://kumar1905.github.io/LANDING-PAGE/" target="_blank">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 5: Figma Android Development -->
+        <div class="project-card">
+            <img src="pg6.jpg" alt="Figma Android Development">
+            <div class="project-overlay">
+                <h3>Figma Android Development</h3>
+                <p>UI/UX designs for an Android application using Figma.</p>
+                <a href="https://github.com/kumar1905/CODETECH-TASK1" target="_blank">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 6: Temperature Converter -->
+        <div class="project-card">
+            <img src="pg5.jpg" alt="Temperature Converter">
+            <div class="project-overlay">
+                <h3>Temperature Converter</h3>
+                <p>A simple web-based tool to convert temperatures between units.</p>
+                <a href="https://kumar1905.github.io/TEMPERATURE-CONVERTOR/" target="_blank">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Contact Me Section -->
+     <!-- Contact Me Section -->
+<section class="contact-section" id="contact">
+    <h1>Contact Me</h1>
+    <div class="contact-container">
+        <!-- Add this div for the "Contact Me" text -->
+        <div id="contact-me-text" style="display: none; text-align: center; width: 100%; margin-bottom: 20px;">
+            <h2>Contact Me</h2>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Me</h2>
+            <p><i class="fas fa-paper-plane"></i>kumarvenkat1907@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 9346312986</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/_kumarvenkat_/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/kumar-venkat/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/kumar1905" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://facebook.com/your-facebook-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/your-twitter-link" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            </div>
+            <a href="KumarVenkat Resume.pdf" target="_blank" class="resume-btn">Explore my Resume</a>
+        </div>
+        <!-- Add an id to the form -->
+        <form id="contact-form" class="contact-form">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your email">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

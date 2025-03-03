@@ -1,0 +1,563 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    width: 100%;
+    background: url('bglogo.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+
+.content {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    text-align: left;
+    font-size: 1.3em;
+    padding-left: 20px;
+}
+
+.content h1 {
+    font-size: 3em;
+    font-style: italic;
+}
+
+.logo {
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: white;
+}
+
+span {
+    color: #f9004d;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    position: relative;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background-color: #438fa8; /* Change to match your text color */
+    transition: width 0.4s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+
+/* Content Section */
+.content {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between elements */
+    font-size: 1.3em; /* Increase text size */
+    padding-left: 20px;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin: 0;
+    padding-bottom: 50px;
+    font-style: italic;
+   
+}
+
+.content h3 {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 10px;
+}
+
+
+
+
+/* About Section */
+.about {
+    background: url('bglogo.jpg') no-repeat center center/cover;
+    min-height: 120vh; /* Increased height to ensure enough space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 50px; /* More padding for extra space */
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+}
+
+.about-image img {
+    width: 500px; /* Increased size */
+    height: auto;
+    border-radius: 10px;
+    margin-right: 40px;
+    margin-left: -80px;
+    padding-bottom: 200px;
+}
+
+.about-text h2 {
+    font-size: 50px; /* Bigger heading */
+    color: #ffffff; /* Updated heading color */
+    margin-bottom: 20px; /* Space below heading */
+    
+}
+
+.about-text p {
+    font-size: 18px; /* Bigger text for better readability */
+    line-height: 1.8; /* More spacing between lines */
+    margin-bottom: 15px; /* Space between paragraphs */
+    color: aliceblue;
+    font-style: italic;
+}
+
+.text-content {
+    color: white;
+    font-weight: normal; /* Make all text unbold */
+}
+h2 {
+    font-size: 32px; /* Bigger text */
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: white;
+}
+h1 {
+    padding-bottom: 5px;
+    font-size: 3rem; /* Makes it bigger */
+    font-weight: bold; /* Keep it bold */
+    color: #438fa8; /* White text */
+}
+
+/* Styling for h4 (Subheading) */
+h4 {
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.3rem; /* Bigger than p tag */
+    color: #438fa8; /* White text */
+}
+h3{
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.3rem; /* Bigger than p tag */
+    color: #438fa8; /* White text */
+}
+
+button:hover {
+    border-bottom: 2px solid white; /* Line appears under button */
+}
+/* Remove default underline */
+button {
+    border: none;
+    background: none;
+    color: white; /* Keep text white */
+    font-size: 1rem; /* Adjust size if needed */
+    font-weight: normal; /* Normal text */
+    position: relative; /* Needed for the hover effect */
+}
+
+/* Add underline only on hover */
+button:hover::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjusts distance of line */
+    width: 100%;
+    height: 2px;
+    background-color: #438fa8; /* White underline */
+}
+
+.tabs {
+    margin-top: 20px;
+}
+
+.tab-link {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px; /* Bigger text */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    margin-right: 20px;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 5px;
+    transition: all 0.3s;
+}
+
+
+
+.tab-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+/* Services Section */
+
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('bglogo.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-content {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.services h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #438fa8;
+    font-weight: bold;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.service-card {
+    background-color: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    min-height: 200px;
+}
+
+.service-card i {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service-card h5 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.service-card:hover {
+    background-color: #438fa8;
+    color: white;
+    transform: scale(1.05);
+}
+
+.service-card:hover i {
+    color: white;
+}
+/*projects section*/
+/* Projects Section */
+.projects {
+    background: url('bglogo.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center; /* Center the title */
+    min-height: 100vh; /* Ensure the section fits the screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the title */
+}
+
+.projects .title h1 {
+    font-size: 3.5rem;
+    color: #438fa8;
+    margin-bottom: 40px;
+    text-align: center; /* Ensure the title is centered */
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    gap: 30px; /* Increased gap between cards */
+    width: 95%; /* Increase width to fit the screen */
+    max-width: 100%; /* Allow the container to take full width */
+    margin: 0; /* Remove default margin */
+    padding-left: 5%; /* Add padding to align cards to the left */
+    justify-content: flex-start; /* Align cards to the left */
+}
+
+.project-card {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Increased height */
+    overflow: hidden;
+    border-radius: 15px; /* Slightly larger border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+    background-color: rgba(67, 95, 168, 0); /* Initial transparent background */
+    padding: 20px; /* Added padding inside the card */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    background-color: rgba(67, 95, 168, 0.8); /* Semi-transparent #435fa8 background on hover */
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+    padding: 30px; /* Increased padding inside the overlay */
+}
+
+.project-overlay h3 {
+    font-size: 1.8rem; /* Increased font size */
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.project-overlay p {
+    font-size: 1.2rem; /* Increased font size */
+    text-align: center;
+    margin-bottom: 25px; /* Increased margin */
+}
+
+.project-overlay a {
+    color: white;
+    font-size: 1.8rem; /* Increased font size */
+    text-decoration: none;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+/* Contact Section */
+/* Contact Section */
+/* Contact Section */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+.contact-section {
+    width: 100%;
+    min-height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background: url('bglogo.jpg') no-repeat center center/cover; /* Background image */
+    padding: 40px 20px; /* Padding for spacing */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 60px; /* Increased padding */
+    border-radius: 15px;
+}
+
+.contact-info {
+    flex: 1;
+    margin-right: 60px; /* Increased margin */
+}
+
+.contact-info h2 {
+    font-size: 42px; /* Bigger heading */
+    margin-bottom: 25px; /* Increased spacing */
+    color: white;
+}
+
+.contact-info p {
+    font-size: 22px; /* Bigger text */
+    margin: 15px 0; /* Increased spacing */
+    color: white;
+}
+
+.contact-info i {
+    color: #438fa8; /* Updated icon color */
+    margin-right: 10px;
+    font-size: 24px; /* Bigger icons */
+}
+
+.social-icons {
+    margin: 20px 0; /* Increased spacing */
+}
+
+.social-icons a {
+    color: white;
+    font-size: 28px; /* Bigger icons */
+    margin-right: 20px; /* Increased spacing */
+    display: inline-block; /* Ensure icons are treated as blocks for transformations */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.social-icons a:hover {
+    color: #438fa8; /* Updated hover color */
+    transform: scale(1.2) rotate(15deg); /* Animation: scale and rotate */
+}
+
+.resume-btn {
+    background-color: #438fa8; /* Updated button color */
+    border: none;
+    padding: 15px 30px; /* Bigger button */
+    color: white;
+    font-size: 18px; /* Bigger text */
+    cursor: pointer;
+    margin-top: 20px; /* Increased spacing */
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition */
+}
+
+.resume-btn:hover {
+    background-color: #f9004d; /* Hover color */
+    transform: translateY(-5px); /* Animation: move up */
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px; /* Bigger input fields */
+    margin: 15px 0; /* Increased spacing */
+    background: #222;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px; /* Bigger text */
+}
+
+.contact-form textarea {
+    height: 150px; /* Taller textarea */
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #438fa8; /* Updated button color */
+    border: none;
+    padding: 15px 30px; /* Bigger button */
+    color: white;
+    font-size: 18px; /* Bigger text */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition */
+}
+
+.submit-btn:hover {
+    background-color: #f9004d; /* Hover color */
+    transform: translateY(-5px); /* Animation: move up */
+}
+/* Contact Section Heading */
+.contact-heading {
+    text-align: center; /* Center the text */
+    width: 100%; /* Full width */
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+.contact-heading h1 {
+    font-size: 2.5rem; /* Bigger font size */
+    color: #438fa8; /* Color: #438fa8 */
+    font-weight: bold; /* Bold text */
+    margin: 0; /* Remove default margin */
+    padding-bottom:10px; /* Remove default padding */
+}
+
+/* Optional: Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
